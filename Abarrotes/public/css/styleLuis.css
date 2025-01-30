@@ -1,0 +1,72 @@
+:root
+{
+  --Texto:black;
+  --ColorP:#7CAA2D;
+  --ColorS:#F5E356;
+  --ColorT:#cB6318;
+}
+*,*::before,*::after
+{
+  box-sizing: inherit;
+}
+header
+{
+  background-color: var(--ColorS);
+}
+footer
+{
+  background-color: var(--ColorS);
+}
+header .CONTENEDOR
+{
+  max-width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  direction:column;
+}
+footer .CONTENEDOR
+{
+  max-width: 90%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  direction:column;
+}
+nav .CONTENEDOR a
+{
+  margin: auto 30%;
+  padding:15px;
+  border-radius: 10px;
+  text-align: center;
+}
+nav .CONTENEDOR a:hover
+{
+  background-color: var(--ColorP);
+  font-weight: bold;
+}
+a
+{
+  text-decoration: none;
+  color:var(--Texto);  
+}
+figure .CONTENEDOR
+{
+  height: 80px;
+}
+figure .CONTENEDOR img
+{
+  height: 100%;
+}
+@media only screen and (max-width:650px)
+{
+  header
+  {
+    height: 300px;
+  }
+  header .CONTENEDOR
+  {
+    display: flex;
+    flex-direction: column;
+  }
+}
