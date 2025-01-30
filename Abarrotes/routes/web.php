@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Route::get('/Inicio', function () {
   return view('app');
-});
+})->name('Inicio');
 
 Route::get('/resetpassword', function () {
   return view('plantillas.resetpassword');
