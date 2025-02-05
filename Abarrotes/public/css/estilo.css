@@ -113,10 +113,10 @@ html {
     transform: scale(0.95);
   }
   
-  input[type=text] {
+  input[type=email],[type=password] {
     background-color: #f6f6f6;
     border: none;
-    color: #0d0d0d;
+    color: #e41616;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;

@@ -12,22 +12,24 @@
 </head>
 <body>  
 <div class="wrapper fadeInDown">
-      <div id="formContent">
+    <div id="formContent">
         
         <div class="fadeIn first">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-POwnO2XAzcxcHV4-FCoxncjXQ6UMlXmk-Q&s" id="icon" alt="User Icon" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-POwnO2XAzcxcHV4-FCoxncjXQ6UMlXmk-Q&s" id="icon" alt="User Icon" />
         </div>
     
-        <form method="post">
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Log In">
+        <form action="{{ route('login') }}" method="POST">
+            @csrf
+            <input type="email" id="email" class="fadeIn second" name="email" placeholder="Correo electrónico" required>
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña" required>
+            <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
         </form>
     
         <div id="formFooter">
-          <a class="underlineHover" href="{{ route('resetpassword') }}">Forgot Password?</a>
+        <a class="underlineHover" href="{{ route('resetpassword') }}">¿Olvidaste tu contraseña?</a>
+            <a class="underlineHover" href="{{ route('createaccount') }}">Crear una cuenta</a>
         </div>
-      </div>
     </div>
+</div>
 </body>
 </html>
