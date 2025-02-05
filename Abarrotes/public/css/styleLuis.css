@@ -9,64 +9,97 @@
 {
   box-sizing: inherit;
 }
+html
+{
+  font-size: 62.5%;  
+}
 header
 {
   background-color: var(--ColorS);
 }
+.CONTENEDOR-HEADER
+{
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between ;
+}
+nav
+{
+  display: flex;
+  justify-content: center
+}
+.CONTENEDOR-NAV
+{
+  display: flex;
+}
+.CONTENEDOR-NAV a
+{
+  text-decoration: none;
+  text-align: center;
+  color:var(--Texto); 
+  border-radius: 5px;
+  padding: 1rem;
+  margin: auto 1rem;  
+  display: flex;
+  align-items: center;
+}
+a img
+{
+  height: 2rem;
+  margin: 0 0.25rem;
+}
+.CONTENEDOR-NAV a:hover
+{
+  background-color:var(--ColorT);
+  font-weight: bold;
+}
+.CONTENEDOR-LOGO
+{
+  display: flex;
+  height:7rem;  
+  justify-content: center;
+}
+.CONTENEDOR-LOGO img
+{
+  height: 100%;
+}
+/****************************************************************/
 footer
 {
   background-color: var(--ColorS);
 }
-header .CONTENEDOR
+.CONTENEDOR-FOOTER
 {
   max-width: 90%;
-  height: 100px;
-  margin: 0 auto;
+  height: auto;
+  margin:25px auto 0;
   display: flex;
-  direction:column;
-}
-footer .CONTENEDOR
-{
-  max-width: 90%;
-  height: 100px;
-  margin: 0 auto;
-  display: flex;
-  direction:column;
-}
-nav .CONTENEDOR a
-{
-  margin: auto 30%;
-  padding:15px;
-  border-radius: 10px;
+  justify-content: space-between;
   text-align: center;
+  align-items: center;
 }
-nav .CONTENEDOR a:hover
-{
-  background-color: var(--ColorP);
-  font-weight: bold;
-}
-a
-{
-  text-decoration: none;
-  color:var(--Texto);  
-}
-figure .CONTENEDOR
-{
-  height: 80px;
-}
-figure .CONTENEDOR img
-{
-  height: 100%;
-}
+/**************************************************************************/
 @media only screen and (max-width:650px)
 {
-  header
+  .CONTENEDOR-HEADER
   {
-    height: 300px;
-  }
-  header .CONTENEDOR
-  {
-    display: flex;
     flex-direction: column;
   }
+  .CONTENEDOR-NAV
+  {
+    flex-direction: column;
+  }
+  .CONTENEDOR-NAV a
+  {
+    margin: 0.5rem auto;
+  }
+  .CONTENEDOR-FOOTER
+  {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width:650px) and (max-width:1150px) 
+{
 }
